@@ -10,7 +10,7 @@ body {
   background: linear-gradient(#728ce2, #45433c) fixed;
   line-height: 1.5;
 }
-li{
+li {
   list-style: none;
 }
 
@@ -31,8 +31,6 @@ li{
 .country-image {
   width: 50px;
 }
-.country-info{
-    margin-left: 6rem;
-
-
+.country-info {
+  margin-left: 6rem;
 }

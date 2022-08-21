@@ -1,6 +1,5 @@
 import './css/styles.css';
 
-
 import fetchCountries from './fetchCountries';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
@@ -22,9 +21,7 @@ function searchCountries(evt) {
     clearCountriesInfo();
     return;
   }
-  fetchCountries(query)
-    .then(resultOfSearch)
-    .catch(error)
+  fetchCountries(query).then(resultOfSearch).catch(error);
 }
 
 function resultOfSearch(countries) {
@@ -50,11 +47,14 @@ function makeCard(country) {
         <p><b>Population: </b>${country.population}</p>
         
         <p><b>Languages: </b>${countries}</p>
+
+        <p><b>Google Maps: </b>
+        <a href='${country.maps.googleMaps}' target="_blank">Look on GoogleMap</a></p>
+
     </div>
   `;
-refs.countryInfo.insertAdjacentHTML('beforeend', markup);
-    refs.countryList.innerHTML = '';
-    
+  refs.countryInfo.insertAdjacentHTML('beforeend', markup);
+  refs.countryList.innerHTML = '';
 }
 
 function makeList(countries) {
@@ -67,14 +67,12 @@ function makeList(countries) {
               </li>
             </ul>`;
     })
-      .join('');
+    .join('');
 
-// refs.countryList.insertAdjacentHTML('beforeend', markup);
-    refs.countryInfo.innerHTML = '';
-        refs.countryList.innerHTML = markup;
-
+  // refs.countryList.insertAdjacentHTML('beforeend', markup);
+  refs.countryInfo.innerHTML = '';
+  refs.countryList.innerHTML = markup;
 }
-
 
 function clearCountriesInfo() {
   refs.countryInfo.innerHTML = '';
@@ -83,11 +81,12 @@ function clearCountriesInfo() {
 
 function foundToMuch() {
   clearCountriesInfo();
-  Notiflix.Notify.info('Too many matches found. Please enter a more specific name');
+  Notiflix.Notify.info(
+    'Too many matches found. Please enter a more specific name'
+  );
 }
 
 function error(error) {
   clearCountriesInfo();
   Notiflix.Notify.failure('Oops, there is no country with that name');
 }
-
