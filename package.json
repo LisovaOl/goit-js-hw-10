@@ -1,15 +1,15 @@
 {
-  "name": "parcel-project-template",
+  "name": "goit-js-hw-10",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://lisovaol.github.io/goit-js-hw-10",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LisovaOl/goit-js-hw-09.git"
+    "url": "git+https://github.com/LisovaOl/goit-js-hw-10.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
@@ -18,7 +18,6 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "flatpickr": "^4.6.13",
     "modern-normalize": "^1.1.0",
     "notiflix": "^3.2.5"
   },
