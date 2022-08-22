@@ -53,7 +53,7 @@ function makeCard(country) {
 
     </div>
   `;
-  refs.countryInfo.insertAdjacentHTML('beforeend', markup);
+  refs.countryInfo.innerHTML = markup;
   refs.countryList.innerHTML = '';
 }
 
@@ -70,8 +70,8 @@ function makeList(countries) {
     .join('');
 
   // refs.countryList.insertAdjacentHTML('beforeend', markup);
-  refs.countryInfo.innerHTML = '';
   refs.countryList.innerHTML = markup;
+  refs.countryInfo.innerHTML = '';
 }
 
 function clearCountriesInfo() {
